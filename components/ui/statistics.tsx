@@ -55,7 +55,7 @@ export function Statistics() {
             <div className="text-sm md:text-5xl font-bold text-white mb-2">
               <AnimatedCounter target={stat.value} suffix={stat.suffix} />
             </div>
-            <p className="text-slate-400 text-sm md:text-base">{stat.label}</p>
+            <p className="text-slate-400 text-xs md:text-base">{stat.label}</p>
           </div>
         </motion.div>
       ))}

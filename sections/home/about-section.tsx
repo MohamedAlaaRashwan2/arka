@@ -34,7 +34,7 @@ export function AboutSection() {
           descriptionAr="تأسست في مصر، نمت أركا من مصدر محلي إلى شركة تجارة دولية تخدم أكثر من 10 دول بمنتجات زراعية ممتازة."
         />
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 overflow-x-hidden">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -111,50 +111,50 @@ export function AboutSection() {
           title="Core Values That Drive Us"
           titleAr="القيم الأساسية التي تحفزنا"
         />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-{CORE_VALUES.map((value, i) => {
-  const Icon = iconMap[value.icon] || Award;
-  const direction = directions[i % directions.length];
-
-  return (
-    <motion.div
-      key={i}
-      initial={{
-        opacity: 0,
-        x: direction.x,
-        y: direction.y,
-      }}
-      whileInView={{
-        opacity: 1,
-        x: 0,
-        y: 0,
-      }}
-      viewport={{ once: true }}
-      transition={{
-        duration: 0.7,
-        delay: i * 0.1,
-        ease: "easeOut",
-      }}
-      whileHover={{
-        y: -8,
-        scale: 1.03,
-      }}
-      className="group glass rounded-2xl p-6 shadow-arka hover:shadow-arka-lg transition-shadow"
-    >
-      <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-[#1976D2] to-[#0D47A1] flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-        <Icon className="h-7 w-7" />
-      </div>
-
-      <h3 className="text-lg font-bold mb-2">
-        {t(value.title, value.titleAr)}
-      </h3>
-
-      <p className="text-muted-foreground text-sm leading-relaxed">
-        {t(value.description, value.descriptionAr)}
-      </p>
-    </motion.div>
-  );
-})}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-hidden">
+          {CORE_VALUES.map((value, i) => {
+            const Icon = iconMap[value.icon] || Award;
+            const direction = directions[i % directions.length];
+          
+            return (
+              <motion.div
+                key={i}
+                initial={{
+                  opacity: 0,
+                  x: direction.x,
+                  y: direction.y,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  y: 0,
+                }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.7,
+                  delay: i * 0.1,
+                  ease: "easeOut",
+                }}
+                whileHover={{
+                  y: -8,
+                  scale: 1.03,
+                }}
+                className="group glass rounded-2xl p-6 shadow-arka hover:shadow-arka-lg transition-shadow"
+              >
+                <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-[#1976D2] to-[#0D47A1] flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                  <Icon className="h-7 w-7" />
+                </div>
+          
+                <h3 className="text-lg font-bold mb-2">
+                  {t(value.title, value.titleAr)}
+                </h3>
+          
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {t(value.description, value.descriptionAr)}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

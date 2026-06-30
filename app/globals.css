@@ -35,9 +35,6 @@
     --royal-blue: 211 100% 40%;
     --dark-blue: 211 100% 17%;
   }
-  body {
-    overflow-x: hidden;
-  }
   
 
   .dark {
