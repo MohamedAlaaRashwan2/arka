@@ -16,11 +16,13 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 overflow-hidden">
           <video
-            className="w-full h-full object-cover"
             autoPlay
             muted
             loop
             playsInline
+            preload="auto"
+            disablePictureInPicture
+            className="w-full h-full object-cover"
           >
             <source src="/videos/hero.mp4" type="video/mp4" />
             Your browser does not support the video tag.
