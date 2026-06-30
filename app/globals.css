@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 99%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 211 100% 25%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 203 92% 78%;
+    --secondary-foreground: 211 100% 25%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 203 92% 90%;
+    --accent-foreground: 211 100% 25%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 211 100% 25%;
+    --chart-1: 211 100% 25%;
+    --chart-2: 203 92% 60%;
+    --chart-3: 203 92% 78%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.75rem;
+
+    --baby-blue: 203 92% 90%;
+    --sky-blue: 203 92% 70%;
+    --royal-blue: 211 100% 40%;
+    --dark-blue: 211 100% 17%;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  
+
+  .dark {
+    --background: 211 50% 6%;
+    --foreground: 210 40% 98%;
+    --card: 211 45% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 211 45% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 203 92% 70%;
+    --primary-foreground: 211 50% 6%;
+    --secondary: 211 45% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 211 45% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 211 45% 20%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 211 45% 18%;
+    --input: 211 45% 18%;
+    --ring: 203 92% 70%;
+    --chart-1: 203 92% 70%;
+    --chart-2: 211 100% 40%;
+    --chart-3: 203 92% 78%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl border border-white/20 dark:border-white/10;
+  }
+  .glass-dark {
+    @apply bg-slate-900/70 backdrop-blur-xl border border-white/10;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-[#1976D2] to-[#64B5F6] bg-clip-text text-transparent;
+  }
+  .text-gradient-light {
+    @apply bg-gradient-to-r from-[#A7D8F5] to-white bg-clip-text text-transparent;
+  }
+  .bg-gradient-arka {
+    background: linear-gradient(135deg, #0D47A1 0%, #1976D2 40%, #64B5F6 100%);
+  }
+  .bg-gradient-arka-soft {
+    background: linear-gradient(135deg, #A7D8F5 0%, #64B5F6 50%, #1976D2 100%);
+  }
+  .shadow-arka {
+    box-shadow: 0 10px 40px -10px rgba(25, 118, 210, 0.3);
+  }
+  .shadow-arka-lg {
+    box-shadow: 0 20px 60px -15px rgba(25, 118, 210, 0.4);
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.5);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
+/* RTL support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Custom cursor */
+@media (min-width: 1024px) {
+  .custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid hsl(var(--primary));
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease-out, width 0.2s, height 0.2s;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+  }
+  .custom-cursor-dot {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: hsl(var(--primary));
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+  }
+  * {
+    cursor: none;
+  }
+  a, button, [role="button"], input, textarea, select {
+    cursor: none;
+  }
+}
+
+/* Loading screen */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0D47A1 0%, #1976D2 50%, #64B5F6 100%);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(90deg, hsl(var(--muted)) 0%, hsl(var(--accent)) 50%, hsl(var(--muted)) 100%);
+  background-size: 1000px 100%;
+}
