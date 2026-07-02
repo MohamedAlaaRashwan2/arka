@@ -6,6 +6,7 @@ import { ArrowRight, Wheat, Ship, Sprout } from 'lucide-react';
 import { SectionHeading } from '@/components/shared/section-heading';
 import { useI18n } from '@/hooks/use-i18n';
 import { DIVISIONS } from '@/constants';
+import Image from 'next/image';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Wheat, Ship, Sprout,
@@ -41,9 +42,11 @@ export function DivisionsSection() {
               >
                 {/* Background image */}
                 <div className="absolute inset-0">
-                  <img
+                  <Image
                     src={division.image}
                     alt={t(division.name, division.nameAr)}
+                    width={100}
+                    height={100}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0D47A1] via-[#0D47A1]/80 to-[#0D47A1]/30" />

@@ -41,19 +41,6 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Floating decorative elements */}
-      {/* <motion.div
-        animate={{ y: [0, -20, 0] }}
-        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute top-1/4 left-10 w-32 h-32 rounded-full bg-[#A7D8F5]/20 blur-3xl hidden lg:block"
-      />
-      <motion.div
-        animate={{ y: [0, 20, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute bottom-1/4 right-10 w-48 h-48 rounded-full bg-[#64B5F6]/20 blur-3xl hidden lg:block"
-      /> */}
-
-
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center pt-20">
         <motion.div
@@ -109,7 +96,7 @@ export function HeroSection() {
             asChild
             size="lg"
             variant="outline"
-            className="border-white/30 text-white hover:bg-white/10 hover:text-white text-base px-8 h-14 backdrop-blur-sm"
+            className="border-white/30 dark:text-white text-black bg-[#0D47A1] dark:bg-black hover:bg-white/10 dark:hover:bg-white/10 hover:text-white text-base px-8 h-14 backdrop-blur-sm"
           >
             <Link href="/contact" className="flex items-center gap-2">
               <Play className="h-4 w-4" />

@@ -29,7 +29,7 @@ export function LoadingScreen() {
               className="text-5xl font-bold text-white tracking-widest font-display"
             >
               <Image
-                src="/images/logo.png"
+                src="/images/logo.w.png"
                 alt="ARKA Logo"
                 width={200}
                 height={200}

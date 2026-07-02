@@ -135,7 +135,7 @@ export default function ContactPage() {
             >
               <div className="glass rounded-3xl overflow-hidden shadow-arka-lg">
                 <iframe
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=31.22%2C30.04%2C31.25%2C30.06&layer=mapnik&marker=30.05%2C31.236"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.776930446481!2d30.667502900000002!3d30.892900700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f6397cbd55f58f%3A0xa5fc7e6a04ca7b5c!2z2KvZhNin2KzYqSDYp9mE2KjYsdmD2KfYqiDZhNmE2KrYqNix2YrYryDZiCDYp9mE2KrYrNmF2YrYryDZiCDYp9mE2KfYs9iq2YrYsdin2K8g2Ygg2KfZhNiq2LXYr9mK2LE!5e0!3m2!1sen!2seg!4v1782995791583!5m2!1sen!2seg"
                   className="w-full h-[400px] border-0"
                   loading="lazy"
                   title="ARKA Location"

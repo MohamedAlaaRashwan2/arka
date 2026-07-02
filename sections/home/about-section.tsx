@@ -16,10 +16,10 @@ export function AboutSection() {
   const directions = [
   { x: -60, y: 0 },  // من اليسار
   { x: 0, y: -60 },  // من الأعلى
-  { x: 60, y: 0 },   // من اليمين
+  { x: 30, y: 0 },   // من اليمين
   { x: -60, y: 0 },  // من اليسار
   { x: 0, y: 60 },   // من الأسفل
-  { x: 60, y: 0 },   // من اليمين
+  { x: 30, y: 0 },   // من اليمين
 ];
 
   return (
@@ -34,7 +34,7 @@ export function AboutSection() {
           descriptionAr="تأسست في مصر، نمت أركا من مصدر محلي إلى شركة تجارة دولية تخدم أكثر من 10 دول بمنتجات زراعية ممتازة."
         />
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 overflow-x-hidden">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 overflow-x-hidden md:overflow-visible ">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -43,7 +43,7 @@ export function AboutSection() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-arka-lg">
+            <div className="relative rounded-3xl overflow-hidden shadow-none md:shadow-arka-lg">
               <Image
                 src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1000&q=80"
                 alt="ARKA International Trade"
@@ -72,7 +72,7 @@ export function AboutSection() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <div className="glass rounded-2xl p-6 shadow-arka">
+            <div className="glass rounded-2xl p-6 shadow-none md:shadow-arka">
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-[#1976D2] to-[#0D47A1] flex items-center justify-center text-white">
                   <Target className="h-6 w-6" />
@@ -87,7 +87,7 @@ export function AboutSection() {
               </p>
             </div>
 
-            <div className="glass rounded-2xl p-6 shadow-arka">
+            <div className="glass rounded-2xl p-6 shadow-none md:shadow-arka">
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-[#64B5F6] to-[#1976D2] flex items-center justify-center text-white">
                   <Eye className="h-6 w-6" />
@@ -111,7 +111,7 @@ export function AboutSection() {
           title="Core Values That Drive Us"
           titleAr="القيم الأساسية التي تحفزنا"
         />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-hidden">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-hidden md:overflow-visible">
           {CORE_VALUES.map((value, i) => {
             const Icon = iconMap[value.icon] || Award;
             const direction = directions[i % directions.length];
@@ -139,7 +139,7 @@ export function AboutSection() {
                   y: -8,
                   scale: 1.03,
                 }}
-                className="group glass rounded-2xl p-6 shadow-arka hover:shadow-arka-lg transition-shadow"
+                className="group glass border-white/10 rounded-2xl p-6 shadow-none md:shadow-arka md:hover:shadow-arka-lg transition-shadow"
               >
                 <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-[#1976D2] to-[#0D47A1] flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
                   <Icon className="h-7 w-7" />
