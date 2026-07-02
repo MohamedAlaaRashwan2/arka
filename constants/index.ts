@@ -49,7 +49,7 @@ export const DIVISIONS: Division[] = [
       'ضمان الجودة',
     ],
     image:
-      'https://6a43934894555f542c2eaddc.imgix.net/sandbox/transport-logistics-concept.jpg',
+      'https://6a43934894555f542c2eaddc.imgix.net/sandbox/transport-logistics-concept.avif',
     icon: 'Wheat',
     color: 'from-green-500 to-blue-500',
   },
@@ -103,7 +103,7 @@ export const DIVISIONS: Division[] = [
       'جودة التصدير',
     ],
     image:
-      'https://6a43934894555f542c2eaddc.imgix.net/sandbox/farmer-harvesting-tomatoes-avocados-field.jpg',
+      'https://6a43934894555f542c2eaddc.imgix.net/sandbox/farmer-harvesting-tomatoes-avocados-field.avif',
     icon: 'Sprout',
     color: 'from-amber-500 to-green-500',
   },
